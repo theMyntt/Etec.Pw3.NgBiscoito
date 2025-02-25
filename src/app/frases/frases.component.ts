@@ -1,3 +1,7 @@
+/**
+ * @author Gabriel Araújo e Andrey Nardy
+ */
+
 import { Component } from '@angular/core';
 
 @Component({
