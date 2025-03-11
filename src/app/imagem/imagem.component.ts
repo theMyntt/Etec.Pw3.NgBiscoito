@@ -3,20 +3,28 @@
  */
 
 import { Component } from '@angular/core';
+import { FrasesComponent } from '../frases/frases.component';
 
 @Component({
   selector: 'app-imagem',
-  imports: [],
+  imports: [FrasesComponent],
   templateUrl: './imagem.component.html',
   styleUrl: './imagem.component.scss'
 })
 export class ImagemComponent {
-  imageSource = '/biscoito.png'
+  imageSource = '/biscoito.png';
+  phrasesOpen = false
 
   changeImageSource() {
-    if (this.imageSource == '/biscoito.png')
+    if (this.imageSource == '/biscoito.png') {
+      this.phrasesOpen = true
       this.imageSource = '/biscoito-aberto.png'
-    else
+    }
+    else {
+      this.phrasesOpen = false
       this.imageSource = '/biscoito.png'
+    }
   }
+
+
 }
