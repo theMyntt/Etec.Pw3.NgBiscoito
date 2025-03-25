@@ -1,3 +1,14 @@
-<img [src]="imageSource" (click)="changeImageSource()" />
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <div style="min-height: 300px; display: flex; align-items: center; flex-direction: column;">
+    <img [src]="imageSource" />
 
-<app-frases [class]="phrasesOpen ? 'open' : 'closed'"></app-frases>
+    <app-frases
+      [class]="phrasesOpen ? 'open' : 'closed'"
+      [selectedPhrase]="selectedPhrase"
+    ></app-frases>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 5px">
+    <app-botao variant="botao" (click)="quebrar()" text="Oi"></app-botao>
+    <app-botao variant="secundario" (click)="reiniciar()" text="oi vida"></app-botao>
+  </div>
+</div>
